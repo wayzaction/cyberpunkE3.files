@@ -1,0 +1,112 @@
+@define-color accent transparent;
+@define-color txt #FF3150;
+@define-color bg rgba(255, 49, 80, 0.1);
+@define-color bg2 transparent;
+
+ * {
+    font-family: 'ProFont IIx Nerd Font', regular;
+    font-size: 13px;
+ }
+
+ /* Window */
+ window {
+    margin: 0px;
+    padding: 10px;
+    border-radius: 0px;
+    background-color: transparent;
+    animation: slideIn 0.5s ease-in-out both;
+ }
+
+ /* Slide In */
+ @keyframes slideIn {
+    0% {
+       opacity: 0;
+    }
+
+    100% {
+       opacity: 1;
+    }
+ }
+
+ /* Inner Box */
+ #inner-box {
+    margin: 5px;
+    padding: 0px;
+    border: none;
+    background-color: transparent;
+    border-radius: 10px;
+    animation: fadeIn 0.5s ease-in-out both;
+ }
+
+ /* Fade In */
+ @keyframes fadeIn {
+    0% {
+       opacity: 0;
+    }
+
+    100% {
+       opacity: 1;
+    }
+ }
+
+ /* Outer Box */
+ #outer-box {
+    margin: 0px;
+    padding: 10px;
+    border: none;
+    background-color: 0;
+ }
+
+ /* Scroll */
+ #scroll {
+    margin: 10px;
+    padding: 0px;
+    border: none;    
+    border-radius: 10px;
+ }
+
+ /* Input */
+ #input {
+    margin: 10px;
+    padding: 10px;
+    border: none;
+    border-bottom: 1px solid rgba(255, 49, 80, 0.5);
+    border-top: 1px solid rgba(255, 49, 80, 0.5);
+    border-left: 1px solid rgba(255, 49, 80, 0.5);
+    border-right: 1px solid rgba(255, 49, 80, 0.5);
+    color: @accent;
+    background-color: @bg2;
+    animation: fadeIn 0.5s ease-in-out both;
+    border-radius: 10px;
+ }
+
+ #input-focus {
+
+    box-shadow:none;
+
+    }
+
+
+ /* Text */
+ #text {
+    margin: 5px;
+    padding: 10px;
+    border: none;
+    color: @txt;
+    animation: fadeIn 0.5s ease-in-out both;
+ }
+
+ /* Selected Entry */
+ #entry:selected {
+   background-color: rgba(255, 49, 80, 0.1);
+    border-bottom: 1px solid rgba(255, 49, 80, 0.5);
+    border-top: 1px solid rgba(255, 49, 80, 0.5);
+    border-left: 1px solid rgba(255, 49, 80, 0.5);
+    border-right: 1px solid rgba(255, 49, 80, 0.5);
+    border-radius: 10px;
+    outline: none;
+ }
+
+ #entry:selected #text {
+    color: @txt;
+ }
